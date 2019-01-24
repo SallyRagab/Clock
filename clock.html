@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>A Digital Analog Clock</title>
+    <link rel="stylesheet" href="clock.css" type="text/css" media="all">
+    <script src="clockx.js" defer></script>
+  </head>
+  <body onload="updateClock(); setInterval('updateClock()', 1000 )">
+    <div class="digital">
+      <span id="clock">&nbsp;</span>
+    </div>
+  </body>
+</html>

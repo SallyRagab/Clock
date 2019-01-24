@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+}
+.digital {
+  background-color: black;
+  color: white;
+  padding: 10px 2px;
+  border-radius: 5px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+  border: 10px solid grey;
+}
+#clock {
+  border: 2px solid white;
+  padding: 15px;
+  border-radius: 5px;
+}

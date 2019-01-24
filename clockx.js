@@ -1,0 +1,25 @@
+function init() {
+  timeDisplay = document.createTextNode ("");
+  document.getElementById('clock').appendChild( timeDisplay );
+}
+
+function updateClock() {
+// Getting the current time
+var currentTime = new Date ();
+var currentHours = currentTime.getHours();
+var currentMinutes = currentTime.getMinutes();
+var currentSeconds = currentTime.getSeconds();
+
+// Formating the time
+currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+
+var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+currentHours = ( currentHours < 12 ) ? currentHours : currentHours - 12;
+currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+var currentTimeString = currentHours + " : " + currentMinutes + " : " + currentSeconds + "  " + timeOfDay;
+
+// Display the clock
+document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+}
